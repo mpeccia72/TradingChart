@@ -2,7 +2,7 @@ import './Chart.css';
 
 function Chart() {
     return (
-      <div className="App">
+      <div className="Chart">
         <p>
           Chart
         </p>

@@ -10,6 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 5vh;
+  width: 100vw;
 }
 
 .BottomPanel {
@@ -17,6 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 95vh;
+  width: 100vw;
 }
 
 .App-logo {

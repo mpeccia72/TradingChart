@@ -2,7 +2,7 @@ import './LeftToolBar.css';
 
 function LeftToolBar() {
     return (
-      <div className="App">
+      <div className="LeftBar">
         <p>
           LeftToolBar
         </p>

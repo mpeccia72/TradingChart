@@ -2,7 +2,7 @@ import './TopToolBar.css';
 
 function TopToolBar() {
     return (
-      <div className="App">
+      <div className="Taskbar">
         <p>
           TopToolBar
         </p>

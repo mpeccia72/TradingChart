@@ -2,7 +2,7 @@ import './StockDataBar.css';
 
 function StockDataBar() {
     return (
-      <div className="App">
+      <div className="DataBar">
         <p>
           StockDataBar
         </p>
