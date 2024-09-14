@@ -1,6 +1,27 @@
 
 .Taskbar {
+    display: grid;
+    grid-template-columns: 100px 50px 1fr 200px;
     background-color: blue;
     width: 100%;
     height: 100%;
+}
+
+.SearchIcon {
+    height: 100%;
+    background-color: aqua;
+}
+
+.Indicator {
+    height: 100%;
+    background-color: gold;
+}
+
+.EmptyFiller {
+    height: 100%;
+}
+
+.Login {
+    height: 100%;
+    background-color: rgb(190, 183, 230);
 }
