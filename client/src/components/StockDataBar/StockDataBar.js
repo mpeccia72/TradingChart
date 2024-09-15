@@ -1,11 +1,15 @@
 import './StockDataBar.css';
 
-function StockDataBar() {
+function StockDataBar({ticker}) {
 
     return (
       <div className="DataBar">
         <div className = "Stock">
-          GME
+          <div>{ticker}</div>
+          <div className = "Price">
+        $23.07
+        </div>
+
         </div>
         <p>
           StockDataBar

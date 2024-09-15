@@ -8,17 +8,17 @@ import StockDataBar from './components/StockDataBar/StockDataBar';
 
 function App() {
 
-  const [ticker, setTicker] = useState("")
+  const [ticker, setTicker] = useState("GME")
 
-  // callback function to pass stock ticker selected to parent component
-  const handleDataFromChild = (newTicker) => {
-    setTicker(newTicker)
+  const handleTickerChange = (e) => {
+    if(e.key === 'Enter')
+      setTicker(e.target.value)
   }
 
   return (
     <div className="App">
       <div className="TopPanel">
-        <TopToolBar onTickerChange = {handleDataFromChild} />
+        <TopToolBar ticker = {ticker} handleTickerChange = {handleTickerChange} />
       </div>
       <div className="BottomPanel">
         <LeftToolBar/>
