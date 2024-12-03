@@ -8,21 +8,21 @@
   width: 100vw; /* Fills entire width*/ 
 }
 
-/* TopPanel contains one component. Toolbar. */
-.TopPanel {
-  text-align: center;
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);  /* Red background with some transparency */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Fills to parent width (100vw) */
+  justify-content: center; /* Center the modal horizontally */
+  align-items: center;     /* Center the modal vertically */
+  z-index: 1000;    
 }
 
-/* BottomPanel contains three components. Chart tools, Chart, Stock Data. */
-.BottomPanel {
-  text-align: center;
-  display: grid;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%; /* Fills to parent width (100vw) */
-  grid-template-columns: 50px 1fr 300px; /* Toolbar fixed at 50px. The chart fills to screen. Stock data fixed at 300px. */ 
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: green;
 }
