@@ -5,7 +5,7 @@ import axios from 'axios'
 
 function TradingChart({user_id}) {
 
-  const dataUrl = 'http://localhost:3001/getData';
+  const dataUrl = 'http://3.21.231.100:3001/getData';
   
   const [data, setData] = useState([]); // State to store the fetched data
 
@@ -26,7 +26,7 @@ function TradingChart({user_id}) {
       e.target.value = ''
       try {
         console.log(`user id is ${user_id} and search value is ${searchValue}`)
-        const response = await axios.post('http://localhost:3001/setStock', {"user_id": user_id, "ticker": searchValue })
+        const response = await axios.post('http://3.21.231.100:3001/setStock', {"user_id": user_id, "ticker": searchValue })
         setSearch(searchValue)
         
         console.log(response.data)
@@ -39,7 +39,7 @@ function TradingChart({user_id}) {
   };
 
   const getCompanyData = async(id) => {
-    const response = await axios.post('http://localhost:3001/getCompanyDatak', {"user_id": id})
+    const response = await axios.post('http://3.21.231.100:3001/getCompanyDatak', {"user_id": id})
   }
 
   
@@ -54,10 +54,10 @@ function TradingChart({user_id}) {
         console.log(`user id is from working ${user_id}`)
         const response = await axios.post(dataUrl, body); // Make the POST request
         setData(response.data); // Assuming the response is the array of stock data
-        const response2 = await axios.post('http://localhost:3001/getCompanyData', body)
+        const response2 = await axios.post('http://3.21.231.100:3001/getCompanyData', body)
         setCompany(response2.data.name)
         setTicker(response2.data.ticker)
-        const response3 = await axios.get('http://localhost:3001/mostPopular')
+        const response3 = await axios.get('http://3.21.231.100:3001/mostPopular')
         setPopular(response3.data.ticker)
         setQuantity(response3.data.quantity)
         console.log(response3.data.ticker)
