@@ -49,7 +49,7 @@ export default function LoginModal({handleIsLoggedIn}) {
             } 
 
             try {
-                const response = await axios.post('http://localhost:3001/createUser', formData)
+                const response = await axios.post('http://3.21.231.100:3001/createUser', formData)
                 if(response.status === 201) {
                     console.log(response.status)
                     setSignUpMessage('User created successfully. Proceed to login.')
@@ -71,7 +71,7 @@ export default function LoginModal({handleIsLoggedIn}) {
         else {
             var reRender = false
             try {
-                const response = await axios.post('http://localhost:3001/login', formData)
+                const response = await axios.post('http://3.21.231.100:3001/login', formData)
                 console.log(response.status)
                 if(response.status === 201) {
                     const id = response.data.user_id
