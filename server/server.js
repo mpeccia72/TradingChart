@@ -175,7 +175,7 @@ app.post("/getData", async(req,res) => {
     }
 })
 
-
+/*
 // fetches last quote of ticker
 const fetchLastQuote = async(ticker) => {
     const API_KEY = `https://financialmodelingprep.com/api/v3/quote/${ticker}?apikey=LoMtpDajBUfPBxXQHTUdbg9JH887VzFb`
@@ -275,7 +275,7 @@ const updateTickData = async(seconds) => {
 // scheduled to start taking data at 8:30 CDT (market open)
 
     updateTickData(-30);
-
+*/
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
